@@ -195,6 +195,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1755141477}
   - component: {fileID: 1755141476}
+  - component: {fileID: 1755141479}
+  - component: {fileID: 1755141478}
   m_Layer: 0
   m_Name: Board
   m_TagString: Untagged
@@ -216,6 +218,15 @@ MonoBehaviour:
   width: 7
   height: 9
   tilePrefab: {fileID: 1929575459034370, guid: 45fb69f66c2c447558fed4d0eaab4e5a, type: 2}
+  dots:
+  - {fileID: 1195433397088054, guid: 0335b839418824371a60bbd69beff5e5, type: 2}
+  - {fileID: 1815104090015738, guid: ed225bc23e62b4e4f944dcc48e192118, type: 2}
+  - {fileID: 1298718493730866, guid: 001f1414919e64f5a98d3beb705c73e8, type: 2}
+  - {fileID: 1941612036636046, guid: a7b79b703832b452eb8734019ce5cef4, type: 2}
+  - {fileID: 1108746590919940, guid: a6043c7601dd34b34a63fd90c9d0e6d8, type: 2}
+  - {fileID: 1945822561204506, guid: 3a9b731abc35843519e2c49ce2aa40d7, type: 2}
+  - {fileID: 1852910929799252, guid: 21c13bbc7787f4e95a2d1499bf013a20, type: 2}
+  - {fileID: 1097498412226738, guid: 4f314f164881c4f59b60845c3ebc00e7, type: 2}
 --- !u!4 &1755141477
 Transform:
   m_ObjectHideFlags: 0
@@ -229,3 +240,38 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!58 &1755141478
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755141475}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
+--- !u!114 &1755141479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755141475}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71e7f5c82b46b4b08823b4db25ce7ae4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  column: 0
+  row: 0
+  previousColumn: 0
+  previousRow: 0
+  targetX: 0
+  targetY: 0
+  isMatched: 0
+  swipeAngle: 0
+  swipeResist: 1

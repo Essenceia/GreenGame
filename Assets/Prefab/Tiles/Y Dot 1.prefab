@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 114654914437903212}
   m_Layer: 0
   m_Name: Y Dot 1
-  m_TagString: Untagged
+  m_TagString: Y1
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -72,12 +72,11 @@ MonoBehaviour:
   row: 0
   previousColumn: 0
   previousRow: 0
-  isSelected: 0
   targetX: 0
   targetY: 0
+  isMatched: 0
   swipeAngle: 0
   swipeResist: 1
-  typeID: 0
 --- !u!212 &212024879412584380
 SpriteRenderer:
   m_ObjectHideFlags: 1
