@@ -17,40 +17,35 @@ public class Board : MonoBehaviour {
     private BackgroundTile[,] allTiles;
     public GameObject[,] allDots;
     private FindMatches findMatches;
+    private TrashManager trashManager;
 
-    [Header("Board Creator")]
-    private BoardCreator boardCreator;
+    [Header("Level Manager")]
+    private LevelManager levelManager;
 
-    [Header("Trash can")]
-    public GameObject trashPrefab;
-    public GameObject[] trash;
 
-	// Use this for initialization
-	void Start () {
 
-        float xCan;
-        int nbCan;
+    // Use this for initialization
+    void Start()
+    {
+
+
 
         findMatches = FindObjectOfType<FindMatches>();
+        levelManager = FindObjectOfType<LevelManager>();
+        trashManager = FindObjectOfType<TrashManager>();
         allTiles = new BackgroundTile[width, height];
         allDots = new GameObject[width, height];
 
-        boardCreator = new BoardCreator();
-        boardCreator.Load(3);
+
+        //levelManager = new LevelManager();
+
+        //TODO : get current level
+        levelManager.Load(3);
 
         SetUp();
-
-        //add cans
-        nbCan = boardCreator.getNbCan();
-        trash = new GameObject[nbCan];//boardCreat
-        for (int i = 0; i < nbCan; i++)
-        {
-            xCan = (((width / 2) / (float)nbCan) * (i + 1) );
-            print("Can loc " + xCan);
-            Vector2 vector2 = new Vector3(xCan, -1.5F);
-            trash[i] = Instantiate(trashPrefab, vector2, Quaternion.identity) as GameObject;
-
-        }
+        // TODO : add real trashes
+        int[] test = { 0, 1 };
+        trashManager.Init(test);
 
 	}
 	
@@ -63,7 +58,7 @@ public class Board : MonoBehaviour {
                 backgroundTile.name = "(" + i + ", " + j + ")";
                 int dotToUse = Random.Range(0, dots.Length);
                 int maxIterations = 0;
-                while(MatchesAt(i, j, dots[boardCreator.getDechetPrefabIndex()]) && maxIterations < 100) {
+                while(MatchesAt(i, j, dots[levelManager.getDechetPrefabIndex()]) && maxIterations < 100) {
                     dotToUse = Random.Range(0, dots.Length);
                     maxIterations++;
                 }

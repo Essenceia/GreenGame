@@ -1,14 +1,15 @@
 ﻿<Properties StartupConfiguration="{CB8E025A-C042-EEB6-EFAC-7D77B6BE1158}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/TrashCanManager.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Trash.cs">
     <Files>
-      <File FileName="Assets/Scripts/Board.cs" Line="50" Column="17" />
       <File FileName="Assets/Scripts/Dot.cs" Line="191" Column="5" />
       <File FileName="Assets/Scripts/BackgroundTile.cs" Line="11" Column="9" />
       <File FileName="Assets/Scripts/SwipeController.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/FindMatches.cs" Line="55" Column="67" />
-      <File FileName="Assets/Scripts/BoardCreator.cs" Line="7" Column="28" />
-      <File FileName="Assets/Scripts/TrashCanManager.cs" Line="17" Column="1" />
+      <File FileName="Assets/Scripts/Trash.cs" Line="81" Column="6" />
+      <File FileName="Assets/Scripts/TrashManager.cs" Line="25" Column="28" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="67" Column="25" />
+      <File FileName="Assets/Scripts/Board.cs" Line="60" Column="17" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
