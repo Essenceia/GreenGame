@@ -1,5 +1,5 @@
 #Internal package file, do not edit.
-#Sat Jun 16 04:44:31 CEST 2018
+#Sat Jun 16 11:22:05 CEST 2018
 76.base=/Users/m.pigeon/Recycle shore/Temp/gradleOut/build/intermediates/assets/release
 5.base=/Users/m.pigeon/Recycle shore/Temp/gradleOut/build/intermediates/assets/release
 42.base=/Users/m.pigeon/Recycle shore/Temp/gradleOut/build/intermediates/assets/release
