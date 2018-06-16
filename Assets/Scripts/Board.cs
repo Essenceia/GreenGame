@@ -32,7 +32,11 @@ public class Board : MonoBehaviour {
                     maxIterations++;
                 }
                 maxIterations = 0;
+
                 GameObject dot = Instantiate(dots[dotToUse], tempPosition, Quaternion.identity);
+                dot.GetComponent<Dot>().row = j;
+                dot.GetComponent<Dot>().column = i;
+
                 dot.transform.parent = this.transform;
                 dot.name = "(" + i + ", " + j + ")";
                 allDots[i, j] = dot;
@@ -92,11 +96,48 @@ public class Board : MonoBehaviour {
                     nullCount++;
                 } else if (nullCount > 0) {
                     allDots[i, j].GetComponent<Dot>().row -= nullCount;
-                  //  allDots[i, j] = null;
+                    allDots[i, j] = null;
                 }
             }
             nullCount = 0;
         }
         yield return new WaitForSeconds(.4f);
+        StartCoroutine(FillBoardCo());
+    }
+
+    private void RefillBoard() {
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (allDots[i, j] == null) {
+                    Vector2 tempPosition = new Vector2(i, j);
+                    int dotToUse = Random.Range(0, dots.Length);
+                    GameObject piece = Instantiate(dots[dotToUse], tempPosition, Quaternion.identity);
+                    allDots[i, j] = piece;
+                }
+            }
+        }
+    }
+
+    private bool MatchesOnBoard() {
+        for (int i = 0; i < width; i++) {
+            for (int j = 0; j < height; j++) {
+                if (allDots[i, j] != null) {
+                    if (allDots[i, j].GetComponent<Dot>().isMatched) {
+                        return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    private IEnumerator FillBoardCo() {
+        RefillBoard();
+        yield return new WaitForSeconds(.5f);
+
+        while (MatchesOnBoard()) {
+            yield return new WaitForSeconds(.5f);
+            DestroyMatches();
+        }
     }
 }

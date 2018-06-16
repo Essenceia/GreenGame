@@ -119,24 +119,28 @@ public class Dot : MonoBehaviour
     void MovePieces() {
         if (swipeAngle > -45 && swipeAngle <= 45 && column < board.width - 1) {
             // Right Swipe
+            Debug.Log("right");
             otherDot = board.allDots[column + 1, row];
             otherDot.GetComponent<Dot>().column -= 1;
             column += 1;
         } else if (swipeAngle > 45 && swipeAngle <= 135 && row < board.height - 1)
         {
             // Up Swipe
+            Debug.Log("up");
             otherDot = board.allDots[column, row + 1];
             otherDot.GetComponent<Dot>().row -= 1;
             row += 1;
         } else if ((swipeAngle > 135 || swipeAngle <= -135) && column > 0)
         {
             // Left Swipe
+            Debug.Log("left");
             otherDot = board.allDots[column - 1, row];
             otherDot.GetComponent<Dot>().column += 1;
             column -= 1;
         } else if (swipeAngle < -45 && swipeAngle >= -135 && row > 0)
         {
             // Down Swipe
+            Debug.Log("down");
             otherDot = board.allDots[column, row - 1];
             otherDot.GetComponent<Dot>().row += 1;
             row -= 1;

@@ -1,10 +1,11 @@
 ﻿<Properties StartupConfiguration="{CB8E025A-C042-EEB6-EFAC-7D77B6BE1158}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/Board.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/SwipeController.cs">
     <Files>
-      <File FileName="Assets/Scripts/Board.cs" Line="43" Column="67" />
-      <File FileName="Assets/Scripts/Dot.cs" Line="86" Column="43" />
+      <File FileName="Assets/Scripts/Board.cs" Line="43" Column="37" />
+      <File FileName="Assets/Scripts/Dot.cs" Line="46" Column="6" />
       <File FileName="Assets/Scripts/BackgroundTile.cs" Line="11" Column="9" />
+      <File FileName="Assets/Scripts/SwipeController.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
