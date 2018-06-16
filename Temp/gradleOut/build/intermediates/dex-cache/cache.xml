@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/Users/m.pigeon/Recycle shore/Temp/gradleOut/libs/unity-classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="28.0.0"
+        sha1="0139dad2a20241672d274b8a1e28657d1d9f37c1">
+        <dex dex="/Users/m.pigeon/Recycle shore/Temp/gradleOut/build/intermediates/pre-dexed/release/unity-classes_18bc1e152f4c0fcf1569b44c4d18d15f558722f5.jar" />
+    </item>
+
+</items>
