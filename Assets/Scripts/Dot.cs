@@ -36,12 +36,6 @@ public class Dot : MonoBehaviour
     {
         board = FindObjectOfType<Board>();
         findMatches = FindObjectOfType<FindMatches>();
-        //targetX = (int)transform.position.x;
-        //targetY = (int)transform.position.y;
-        //row = targetY;
-        //column = targetX;
-        //previousRow = row;
-        //previousColumn = column;
     }
 
     // Update is called once per frame
@@ -193,6 +187,11 @@ public class Dot : MonoBehaviour
                 }
             }
         }
+    }
+
+    public void Trash(int index) {
+        column = index;
+        row = index;
     }
 
 

@@ -81,7 +81,9 @@ public class Board : MonoBehaviour {
     private void DestroyMatchesAt(int column, int row) {
         if (allDots[column, row].GetComponent<Dot>().isMatched){
             findMatches.currentMatches.Remove(allDots[column, row]);
-            Destroy(allDots[column, row]);
+            allDots[column, row].GetComponent<Dot>().Trash(-1);
+            Debug.Log(allDots[column, row]);
+            //Destroy(allDots[column, row]);
             allDots[column, row] = null;
         }
     }
