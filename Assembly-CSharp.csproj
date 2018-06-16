@@ -65,9 +65,11 @@
     <Compile Include="Assets\Scripts\Dot.cs" />
     <Compile Include="Assets\Scripts\FindMatches.cs" />
     <Compile Include="Assets\Scripts\LevelManager.cs" />
+    <Compile Include="Assets\Scripts\ProgressManager.cs" />
     <Compile Include="Assets\Scripts\SwipeController.cs" />
     <Compile Include="Assets\Scripts\Trash.cs" />
     <Compile Include="Assets\Scripts\TrashManager.cs" />
+    <Compile Include="Assets\Scripts\YellowTrash.cs" />
     <Reference Include="Unity.PackageManagerUI.Editor">
       <HintPath>/Users/m.pigeon/Recycle shore/Library/ScriptAssemblies/Unity.PackageManagerUI.Editor.dll</HintPath>
     </Reference>

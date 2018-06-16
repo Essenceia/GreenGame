@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 1440
     height: 850
-  m_MinSize: {x: 709, y: 571}
-  m_MaxSize: {x: 18004, y: 18021}
+  m_MinSize: {x: 713, y: 613}
+  m_MaxSize: {x: 18008, y: 18063}
   vertical: 0
-  controlID: 56551
+  controlID: 58786
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -123,7 +123,7 @@ MonoBehaviour:
   m_MinSize: {x: 202, y: 442}
   m_MaxSize: {x: 4002, y: 8042}
   vertical: 1
-  controlID: 56638
+  controlID: 58742
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -246,8 +246,8 @@ MonoBehaviour:
     y: 241
     width: 587
     height: 609
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 2}
   m_Panes:
   - {fileID: 2}
@@ -274,10 +274,10 @@ MonoBehaviour:
     y: 0
     width: 576
     height: 850
-  m_MinSize: {x: 230, y: 571}
-  m_MaxSize: {x: 10000, y: 18021}
+  m_MinSize: {x: 234, y: 613}
+  m_MaxSize: {x: 10004, y: 18063}
   vertical: 1
-  controlID: 56552
+  controlID: 58763
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -296,8 +296,8 @@ MonoBehaviour:
     y: 0
     width: 576
     height: 249
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 204, y: 221}
+  m_MaxSize: {x: 4004, y: 4021}
   m_ActualView: {fileID: 9}
   m_Panes:
   - {fileID: 9}
@@ -330,8 +330,8 @@ MonoBehaviour:
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
+    m_SelectedIDs: 3026e7ff
+    m_LastClickedID: -1628624
     m_ExpandedIDs: 3026e7ff4626e7ff4c26e7ff4a42e7ffb8a6e7ffb6e4e7fffafde7ff1031e8fff431e8ffd632e8ff0034e8ff4608e9ff902fe9ff4e4ee9ff5a5de9ff3888e9ff1889e9fff689e9ff2c8be9ff8cdaf2ff62dbf2ff36dcf2ff66ddf2ff1ee6fafff4e6faffc8e7fafff4e8faffdebcffffaaf3ffff00000000fe680000de6b0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -533,8 +533,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 
-    m_LastClickedInstanceID: 0
+    m_SelectedInstanceIDs: 3026e7ff
+    m_LastClickedInstanceID: -1628624
     m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: 
     m_RenameOverlay:
