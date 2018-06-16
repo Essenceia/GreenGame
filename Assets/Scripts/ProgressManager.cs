@@ -15,7 +15,7 @@ public class ProgressManager : MonoBehaviour {
         UpdateUI();
 	}
 
-    void UpdateScore(int n) {
+    public void UpdateScore(int n) {
         score += n;
         UpdateUI();
     }

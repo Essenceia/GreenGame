@@ -12,6 +12,8 @@ public class Trash : MonoBehaviour {
     private float speed;
     private float amount;
 
+    public ProgressManager progress;
+
     readonly int maxCapacity = 10;
 
     // Use this for initialization
@@ -19,6 +21,7 @@ public class Trash : MonoBehaviour {
     {
         basePosition = transform.position;
         position = transform.position;
+        progress = FindObjectOfType<ProgressManager>();
 
         this.fullitude = 0;
         this.speed = 40;
@@ -55,6 +58,10 @@ public class Trash : MonoBehaviour {
     private void OnMouseDown()
     {
         if (this.isFull()) {
+            if (this.gameObject.tag == "Yellow")
+            {
+                progress.GetComponent<ProgressManager>().UpdateScore(fullitude);
+            }
             //empty can 
             EmptyCan();
         }

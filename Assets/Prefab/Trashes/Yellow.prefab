@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4617811980619922}
   - component: {fileID: 212153476388753418}
   - component: {fileID: 61798462645606604}
-  - component: {fileID: 114981029938639594}
+  - component: {fileID: 114375486109114408}
   m_Layer: 0
   m_Name: Yellow
   m_TagString: Yellow
@@ -67,7 +67,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.73866713, y: 1.0310903}
   m_EdgeRadius: 0
---- !u!114 &114981029938639594
+--- !u!114 &114375486109114408
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -80,6 +80,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fullitude: 0
   contenu: 0000000000000000000000000000000000000000
+  progress: {fileID: 0}
 --- !u!212 &212153476388753418
 SpriteRenderer:
   m_ObjectHideFlags: 1

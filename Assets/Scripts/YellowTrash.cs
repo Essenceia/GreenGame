@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class YellowTrash : MonoBehaviour {
 
+    public ProgressManager progress;
 	// Use this for initialization
 	void Start () {
 		
@@ -13,4 +14,8 @@ public class YellowTrash : MonoBehaviour {
 	void Update () {
 		
 	}
+
+    void UpdateScore() {
+        
+    }
 }
