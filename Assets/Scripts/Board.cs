@@ -18,12 +18,40 @@ public class Board : MonoBehaviour {
     public GameObject[,] allDots;
     private FindMatches findMatches;
 
+    [Header("Board Creator")]
+    private BoardCreator boardCreator;
+
+    [Header("Trash can")]
+    public GameObject trashPrefab;
+    public GameObject[] trash;
+
 	// Use this for initialization
 	void Start () {
+
+        float xCan;
+        int nbCan;
+
         findMatches = FindObjectOfType<FindMatches>();
         allTiles = new BackgroundTile[width, height];
         allDots = new GameObject[width, height];
+
+        boardCreator = new BoardCreator();
+        boardCreator.Load(3);
+
         SetUp();
+
+        //add cans
+        nbCan = boardCreator.getNbCan();
+        trash = new GameObject[nbCan];//boardCreat
+        for (int i = 0; i < nbCan; i++)
+        {
+            xCan = (((width / 2) / (float)nbCan) * (i + 1) );
+            print("Can loc " + xCan);
+            Vector2 vector2 = new Vector3(xCan, -1.5F);
+            trash[i] = Instantiate(trashPrefab, vector2, Quaternion.identity) as GameObject;
+
+        }
+
 	}
 	
     private void SetUp() {
@@ -35,7 +63,7 @@ public class Board : MonoBehaviour {
                 backgroundTile.name = "(" + i + ", " + j + ")";
                 int dotToUse = Random.Range(0, dots.Length);
                 int maxIterations = 0;
-                while(MatchesAt(i, j, dots[dotToUse]) && maxIterations < 100) {
+                while(MatchesAt(i, j, dots[boardCreator.getDechetPrefabIndex()]) && maxIterations < 100) {
                     dotToUse = Random.Range(0, dots.Length);
                     maxIterations++;
                 }
