@@ -5,20 +5,19 @@ using UnityEngine;
 public class Trash : MonoBehaviour {
 
     public int fullitude;
-    private Vector2 maxScale;
-    private Vector2 baseScale;
+    public int[] contenu = { 0, 0, 0, 0, 0 };
+    private Vector2 basePosition;
     private Vector2 position;
 
     private float speed;
     private float amount;
 
-    readonly int maxCapacity = 20;
+    readonly int maxCapacity = 10;
 
     // Use this for initialization
     void Start()
     {
-        maxScale = new Vector2(3F, 3F);
-        baseScale = new Vector2(2F, 2F);
+        basePosition = transform.position;
         position = transform.position;
 
         this.fullitude = 0;
@@ -30,11 +29,11 @@ public class Trash : MonoBehaviour {
     {
         if (this.isFull())
         {
-            position.x = Mathf.Sin(Time.time * speed) * amount;
-            position.y = Mathf.Cos(Time.time * speed) * amount;
+            position.x = basePosition.x + Mathf.Sin(Time.time * speed) * amount;
+            position.y = basePosition.y + Mathf.Cos(Time.time * speed) * amount;
             transform.position = position;
-            print("Is full");
-
+        } else {
+            transform.position = basePosition;
         }
 
     }
@@ -44,39 +43,24 @@ public class Trash : MonoBehaviour {
         return (fullitude >= maxCapacity);
     }
 
-    public void addToCan(int nTrash)
+    public void addToCan(int quantity, int index)
     {
-        if (nTrash < 1)
+        if (!this.isFull())
         {
-            print("Error tash is negative " + nTrash);
-        }
-        else
-        {
-            fullitude += nTrash;
+            fullitude += quantity;
+            contenu[index]++;
         }
     }
 
-
-    private void OnMouseOver()
-    {
-        if (transform.localScale.x < maxScale.x)
-        {
-            //set grow animation
-            transform.localScale += new Vector3(0.2F, 0.2F, 0.2F);
-        }
-
-
-    }
-    void OnMouseExit()
-    {
-        //set default size
-        transform.localScale = baseScale;
-    }
     private void OnMouseDown()
     {
-        //empty can 
-        print("CAN :: emptying ");
-        fullitude = 0;
+        if (this.isFull()) {
+            //empty can 
+            EmptyCan();
+        }
+    }
 
+    private void EmptyCan() {
+        fullitude = 0;
     }
 }

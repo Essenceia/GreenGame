@@ -1,6 +1,6 @@
 Android
 PlayerPath?
-/Users/m.pigeon/Recycle shore/build2.apk
+/Users/m.pigeon/Recycle shore/build3.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 SceneListEnd?
@@ -150,3 +150,6 @@ c6accd665c621e7cf647cffbb2c2bf06 Assembly-CSharp.dll:.Board
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SwipeController
 0a614706daf11109f1e5c1502cc84835 Assembly-CSharp.dll:.Dot
 e13a8fd21e083b1974366b2f59a1ad14 Assembly-CSharp.dll:.FindMatches
+56780db24ea91265e1590f56d92ae3f2 Assembly-CSharp.dll:.Trash
+34967ba0aa35688ad54d7cf15be0a960 Assembly-CSharp.dll:.TrashManager
+22bb97b3747f31982b00dc74624aa811 Assembly-CSharp.dll:.LevelManager

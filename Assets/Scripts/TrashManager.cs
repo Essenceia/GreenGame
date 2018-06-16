@@ -19,12 +19,11 @@ public class TrashManager : MonoBehaviour {
 
         //add cans
         nbCan = trashes.Length;
-        trash = new GameObject[nbCan];//boardCreat
+        trash = new GameObject[nbCan];
         for (int i = 0; i < nbCan; i++)
         {
-            xCan = (((7 / 2) / (float)nbCan) * (i + 1));
-            print("Can loc " + xCan);
-            Vector2 vector2 = new Vector3(xCan, -1.5F);
+            xCan = (float)(1.5 * i);
+            Vector2 vector2 = new Vector2(xCan, -1.8F);
             trash[i] = Instantiate(trashPrefab[i], vector2, Quaternion.identity) as GameObject;
 
         }

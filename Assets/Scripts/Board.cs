@@ -27,24 +27,18 @@ public class Board : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-
-
-
         findMatches = FindObjectOfType<FindMatches>();
         levelManager = FindObjectOfType<LevelManager>();
         trashManager = FindObjectOfType<TrashManager>();
         allTiles = new BackgroundTile[width, height];
         allDots = new GameObject[width, height];
 
-
-        //levelManager = new LevelManager();
-
         //TODO : get current level
         levelManager.Load(3);
 
         SetUp();
         // TODO : add real trashes
-        int[] test = { 0, 1 };
+        int[] test = { 0, 1, 2, 3, 4 };
         trashManager.Init(test);
 
 	}
@@ -58,7 +52,7 @@ public class Board : MonoBehaviour {
                 backgroundTile.name = "(" + i + ", " + j + ")";
                 int dotToUse = Random.Range(0, dots.Length);
                 int maxIterations = 0;
-                while(MatchesAt(i, j, dots[levelManager.getDechetPrefabIndex()]) && maxIterations < 100) {
+                while(MatchesAt(i, j, dots[dotToUse]) && maxIterations < 100) {
                     dotToUse = Random.Range(0, dots.Length);
                     maxIterations++;
                 }
@@ -104,8 +98,7 @@ public class Board : MonoBehaviour {
     private void DestroyMatchesAt(int column, int row) {
         if (allDots[column, row].GetComponent<Dot>().isMatched){
             findMatches.currentMatches.Remove(allDots[column, row]);
-            allDots[column, row].GetComponent<Dot>().Trash(-1);
-            Debug.Log(allDots[column, row]);
+            allDots[column, row].GetComponent<Dot>().Trash("Blue");
             //Destroy(allDots[column, row]);
             allDots[column, row] = null;
         }
@@ -149,6 +142,8 @@ public class Board : MonoBehaviour {
                     allDots[i, j] = piece;
                     piece.GetComponent<Dot>().row = j;
                     piece.GetComponent<Dot>().column = i;
+                    piece.transform.parent = this.transform;
+                    piece.name = "(" + i + ", " + j + ")";
                 }
             }
         }

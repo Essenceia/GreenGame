@@ -12,6 +12,11 @@ TagManager:
   - G2
   - G3
   - G4
+  - Blue
+  - Brown
+  - Green
+  - White
+  - Yellow
   layers:
   - Default
   - TransparentFX

@@ -38,6 +38,25 @@ public class Dot : MonoBehaviour
         findMatches = FindObjectOfType<FindMatches>();
     }
 
+    string TrashMap() {
+        string id = this.gameObject.tag.Substring(0,1);
+        switch (id)
+        {
+            case "B":
+                return "Blue";
+            case "C":
+                return "Compost";
+            case "G":
+                return "Green";
+            case "W":
+                return "White";
+            case "Y":
+                return "Yellow";
+            default:
+                return "";
+        }
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -52,7 +71,7 @@ public class Dot : MonoBehaviour
             // Move toward the target
             tempPosition = new Vector2(targetX, transform.position.y);
             transform.position = Vector2.Lerp(transform.position, tempPosition, .6f);
-            if (board.allDots[column, row] != this.gameObject) {
+            if (column >= 0 && row >= 0 && board.allDots[column, row] != this.gameObject) {
                 board.allDots[column, row] = this.gameObject;
             }
             findMatches.FindAllMatches();
@@ -66,7 +85,7 @@ public class Dot : MonoBehaviour
             // Move toward the target
             tempPosition = new Vector2(transform.position.x, targetY);
             transform.position = Vector2.Lerp(transform.position, tempPosition, .6f);
-            if (board.allDots[column, row] != this.gameObject)
+            if (column >= 0 && row >= 0 && board.allDots[column, row] != this.gameObject)
             {
                 board.allDots[column, row] = this.gameObject;
             }
@@ -189,9 +208,11 @@ public class Dot : MonoBehaviour
         }
     }
 
-    public void Trash(int index) {
-        column = index;
-        row = index;
+    public void Trash(string tag) {
+        GameObject trash = GameObject.FindGameObjectWithTag(TrashMap());
+        trash.GetComponent<Trash>().addToCan(1, 3);
+        column = (int)trash.transform.position.x;
+        row = (int)trash.transform.position.y - 1;
     }
 
 
