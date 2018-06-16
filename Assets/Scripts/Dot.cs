@@ -44,6 +44,7 @@ public class Dot : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        FindMatches();
         if (isMatched) {
             SpriteRenderer mySprite = GetComponent<SpriteRenderer>();
             mySprite.color = new Color(1f, 1f, 1f, .2f);
@@ -81,7 +82,6 @@ public class Dot : MonoBehaviour
     }
 
     public IEnumerator CheckMoveCo(){
-        FindMatches();
         yield return new WaitForSeconds(.5f);
         if (otherDot != null) {
             if (!isMatched && !otherDot.GetComponent<Dot>().isMatched) {                otherDot.GetComponent<Dot>().row = row;
@@ -145,26 +145,29 @@ public class Dot : MonoBehaviour
     }
 
     void FindMatches(){
-
-        Debug.Log(row);
-        if (column > 0 && (column < board.width - 1)) {
+        if (column > 0 && column < board.width - 1) {
             GameObject leftDot1 = board.allDots[column - 1, row];
             GameObject rightDot1 = board.allDots[column + 1, row];
-            if (leftDot1.tag == this.gameObject.tag && rightDot1.tag == this.gameObject.tag) {
-                leftDot1.GetComponent<Dot>().isMatched = true;
-                rightDot1.GetComponent<Dot>().isMatched = true;
-                isMatched = true;
+            if (leftDot1 != null && rightDot1 != null) {
+                if (leftDot1.tag == this.gameObject.tag && rightDot1.tag == this.gameObject.tag)
+                {
+                    leftDot1.GetComponent<Dot>().isMatched = true;
+                    rightDot1.GetComponent<Dot>().isMatched = true;
+                    isMatched = true;
+                }
             }
         }
-        if (row > 0 && (row < board.height - 1))
+        if (row > 0 && row < board.height - 1)
         {
             GameObject UpDot1 = board.allDots[column, row + 1];
             GameObject DownDot1 = board.allDots[column, row - 1];
-            if (UpDot1.tag == this.gameObject.tag && DownDot1.tag == this.gameObject.tag)
-            {
-                UpDot1.GetComponent<Dot>().isMatched = true;
-                DownDot1.GetComponent<Dot>().isMatched = true;
-                isMatched = true;
+            if (UpDot1 != null && DownDot1 != null) {
+                if (UpDot1.tag == this.gameObject.tag && DownDot1.tag == this.gameObject.tag)
+                {
+                    UpDot1.GetComponent<Dot>().isMatched = true;
+                    DownDot1.GetComponent<Dot>().isMatched = true;
+                    isMatched = true;
+                }
             }
         }
     }

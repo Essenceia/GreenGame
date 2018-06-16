@@ -42,22 +42,22 @@ public class Board : MonoBehaviour {
 
     private bool MatchesAt(int column, int row, GameObject piece){
         if (column > 1 && row > 1) {
-            if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row]) {
+            if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row].tag == piece.tag) {
                 return true;
             }
-            if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2])
+            if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2].tag == piece.tag)
             {
                 return true;
             }
         } else if (column <= 1 || row <= 1) {
             if (row > 1) {
-                if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2]) {
+                if (allDots[column, row - 1].tag == piece.tag && allDots[column, row - 2].tag == piece.tag) {
                     return true;
                 }
             }
             if (column > 1)
             {
-                if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row])
+                if (allDots[column - 1, row].tag == piece.tag && allDots[column - 2, row].tag == piece.tag)
                 {
                     return true;
                 }
