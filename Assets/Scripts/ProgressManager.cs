@@ -16,8 +16,18 @@ public class ProgressManager : MonoBehaviour {
 	}
 
     public void UpdateScore(int n) {
-        score += n;
+        for (int i = 0; i < n; i++) {
+            StartCoroutine("AddOneToUI");
+        }
+    }
+
+    public IEnumerator AddOneToUI()
+    {
+        yield return new WaitForSeconds(Random.value);
+
+        score += 1;
         UpdateUI();
+
     }
 
     private void UpdateUI() {

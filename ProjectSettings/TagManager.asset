@@ -17,6 +17,11 @@ TagManager:
   - Green
   - White
   - Yellow
+  - C1
+  - T1
+  - W1
+  - T2
+  - ECO
   layers:
   - Default
   - TransparentFX

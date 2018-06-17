@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour {
 
         //switch scean 
         if (isOver) {
-            SceneManager.LoadScene("ContrinueScreen");
+            SceneManager.LoadScene("WinLoseScreen");
         }
 	}
 }

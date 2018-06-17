@@ -18,6 +18,18 @@ public class Board : MonoBehaviour {
     public GameObject[,] allDots;
     private FindMatches findMatches;
     private TrashManager trashManager;
+    public GameObject[] toCompost;
+    public int compostCounter = 0;
+    public GameObject[] toRecycle;
+    public int recycleCounter = 0;
+    public GameObject[] toGlass;
+    public int glassCounter = 0;
+    public GameObject[] toElectronic;
+    public int electronicCounter = 0;
+    public GameObject[] toWaste;
+    public int wasteCounter = 0;
+
+    public BurnScript burnScript;
 
     [Header("Level Manager")]
     private LevelManager levelManager;
@@ -30,6 +42,7 @@ public class Board : MonoBehaviour {
         findMatches = FindObjectOfType<FindMatches>();
         levelManager = FindObjectOfType<LevelManager>();
         trashManager = FindObjectOfType<TrashManager>();
+        burnScript = FindObjectOfType<BurnScript>();
         allTiles = new BackgroundTile[width, height];
         allDots = new GameObject[width, height];
 
@@ -41,13 +54,18 @@ public class Board : MonoBehaviour {
         int[] test = { 0, 1, 2, 3, 4 };
         trashManager.Init(test);
 
+        toCompost = new GameObject[30];
+        toRecycle = new GameObject[30];
+        toGlass = new GameObject[30];
+        toElectronic = new GameObject[30];
+        toWaste = new GameObject[30];
 	}
 	
     private void SetUp() {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
                 Vector2 tempPosition = new Vector2(i, j + offset);
-                GameObject backgroundTile = Instantiate(tilePrefab, tempPosition, Quaternion.identity) as GameObject;
+                GameObject backgroundTile = Instantiate(tilePrefab, tempPosition, tilePrefab.transform.rotation) as GameObject;
                 backgroundTile.transform.parent = this.transform;
                 backgroundTile.name = "(" + i + ", " + j + ")";
                 int dotToUse = Random.Range(0, dots.Length);
@@ -98,7 +116,39 @@ public class Board : MonoBehaviour {
     private void DestroyMatchesAt(int column, int row) {
         if (allDots[column, row].GetComponent<Dot>().isMatched){
             findMatches.currentMatches.Remove(allDots[column, row]);
-            allDots[column, row].GetComponent<Dot>().Trash("Blue");
+            allDots[column, row].GetComponent<Dot>().Trash();
+
+            if (allDots[column,row].tag.Substring(0, 1) == "Y") {
+                
+            }
+
+            switch (allDots[column, row].tag.Substring(0, 1))
+            {
+                case "Y":
+                    toRecycle[recycleCounter] = allDots[column, row];
+                    recycleCounter++;
+                    break;
+                case "C":
+                    toCompost[compostCounter] = allDots[column, row];
+                    compostCounter++;
+                    break;
+                case "W":
+                    toGlass[glassCounter] = allDots[column, row];
+                    glassCounter++;
+                    break;
+                case "T":
+                    toElectronic[electronicCounter] = allDots[column, row];
+                    electronicCounter++;
+                    break;
+                case "G":
+                    toWaste[wasteCounter] = allDots[column, row];
+                    wasteCounter++;
+                    break;
+                default:
+                    print("Incorrect intelligence level.");
+                    break;
+            }
+
             //Destroy(allDots[column, row]);
             allDots[column, row] = null;
         }
@@ -128,7 +178,7 @@ public class Board : MonoBehaviour {
             }
             nullCount = 0;
         }
-        yield return new WaitForSeconds(.4f);
+        yield return new WaitForSeconds(.2f);
         StartCoroutine(FillBoardCo());
     }
 
@@ -164,13 +214,13 @@ public class Board : MonoBehaviour {
 
     private IEnumerator FillBoardCo() {
         RefillBoard();
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
 
         while (MatchesOnBoard()) {
-            yield return new WaitForSeconds(.5f);
+            yield return new WaitForSeconds(.3f);
             DestroyMatches();
         }
-        yield return new WaitForSeconds(.5f);
+        yield return new WaitForSeconds(.2f);
         currentState = GameState.move;
     }
 }

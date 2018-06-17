@@ -23,9 +23,8 @@ public class TrashManager : MonoBehaviour {
         for (int i = 0; i < nbCan; i++)
         {
             xCan = (float)(1.5 * i);
-            Vector2 vector2 = new Vector2(xCan, -1.8F);
+            Vector2 vector2 = new Vector2(xCan, -2.5F);
             trash[i] = Instantiate(trashPrefab[i], vector2, Quaternion.identity) as GameObject;
-
         }
 	}
 

@@ -1,20 +1,16 @@
 ﻿<Properties StartupConfiguration="{CB8E025A-C042-EEB6-EFAC-7D77B6BE1158}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/MainMenuScript.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GreenTrash.cs">
     <Files>
-      <File FileName="Assets/Scripts/Dot.cs" Line="207" Column="14" />
-      <File FileName="Assets/Scripts/BackgroundTile.cs" Line="11" Column="9" />
+      <File FileName="Assets/Scripts/Dot.cs" Line="273" Column="28" />
+      <File FileName="Assets/Scripts/Board.cs" Line="114" Column="13" />
+      <File FileName="Assets/Scripts/FindMatches.cs" Line="12" Column="30" />
+      <File FileName="Assets/Scripts/Trash.cs" Line="66" Column="53" />
+      <File FileName="Assets/Scripts/GameManager.cs" Line="24" Column="10" />
+      <File FileName="Assets/Scripts/GameEndMenu.cs" Line="1" Column="1" />
       <File FileName="Assets/Scripts/SwipeController.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/FindMatches.cs" Line="55" Column="67" />
-      <File FileName="Assets/Scripts/Trash.cs" Line="18" Column="5" />
-      <File FileName="Assets/Scripts/TrashManager.cs" Line="30" Column="3" />
-      <File FileName="Assets/Scripts/LevelManager.cs" Line="67" Column="25" />
-      <File FileName="Assets/Scripts/CountDown.cs" Line="8" Column="11" />
       <File FileName="Assets/Scripts/ProgressManager.cs" Line="18" Column="12" />
-      <File FileName="Assets/Scripts/YellowTrash.cs" Line="19" Column="9" />
-      <File FileName="Assets/Scripts/GameManager.cs" Line="34" Column="1" />
-      <File FileName="Assets/Scripts/MainMenuScript.cs" Line="1" Column="1" />
-      <File FileName="Assets/Scripts/Board.cs" Line="32" Column="57" NotebookId="1" />
+      <File FileName="Assets/Scripts/GreenTrash.cs" Line="20" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

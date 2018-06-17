@@ -11,6 +11,21 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 1445373763861902}
   m_IsPrefabParent: 1
+--- !u!1 &1406638886907630
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4626980182805218}
+  m_Layer: 0
+  m_Name: receive
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1445373763861902
 GameObject:
   m_ObjectHideFlags: 0
@@ -21,7 +36,7 @@ GameObject:
   - component: {fileID: 4481323060818884}
   - component: {fileID: 212865678100359828}
   - component: {fileID: 61953988061735764}
-  - component: {fileID: 114313622072378908}
+  - component: {fileID: 114554751057944276}
   m_Layer: 0
   m_Name: Green
   m_TagString: Green
@@ -36,10 +51,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1445373763861902}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.3, y: -1.5, z: 0}
+  m_LocalPosition: {x: -3.67, y: -1.54, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
-  m_Children: []
+  m_Children:
+  - {fileID: 4626980182805218}
   m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4626980182805218
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1406638886907630}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.01, y: 0.28, z: 0.0725158}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_Children: []
+  m_Father: {fileID: 4481323060818884}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &61953988061735764
@@ -67,7 +96,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.7305443, y: 1.055459}
   m_EdgeRadius: 0
---- !u!114 &114313622072378908
+--- !u!114 &114554751057944276
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -79,7 +108,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fullitude: 0
-  contenu: 0000000000000000000000000000000000000000
+  progress: {fileID: 0}
 --- !u!212 &212865678100359828
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -115,7 +144,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 137027eaca0534e8289c1548504c0206, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f3a647d2ba6094f958b7299340f11675, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

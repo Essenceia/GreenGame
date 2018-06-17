@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ContrinueScreen.unity
     guid: fcd2c9eb0698947559587e8f4a98c0ce
+  - enabled: 1
+    path: Assets/Scenes/WinLoseScreen.unity
+    guid: e6bd162aa8a104780ae79c9cb4adde30
   m_configObjects: {}
