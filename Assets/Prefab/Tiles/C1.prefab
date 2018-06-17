@@ -81,6 +81,7 @@ MonoBehaviour:
   swipeResist: 1
   trash: {fileID: 0}
   eco: {fileID: 0}
+  Sound: {fileID: 0}
 --- !u!212 &212509629658328724
 SpriteRenderer:
   m_ObjectHideFlags: 1

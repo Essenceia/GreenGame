@@ -37,6 +37,8 @@ public class Dot : MonoBehaviour
     public GameObject trash;
     public GameObject eco;
 
+    public SoundManager Sound;
+
     void Start()
     {
         board = FindObjectOfType<Board>();
@@ -159,6 +161,8 @@ public class Dot : MonoBehaviour
         {
             finalTouchPosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
             CalculateAngle();
+            //Sound.Playswipe();
+
         }
     }
 

@@ -1,9 +1,10 @@
 Android
 PlayerPath?
-/Users/m.pigeon/Recycle shore/build4.apk
+/Users/m.pigeon/Recycle shore/build5.apk
 SceneListBegin?
 Assets/Scenes/SampleScene.unity
 Assets/Scenes/ContrinueScreen.unity
+Assets/Scenes/WinLoseScreen.unity
 SceneListEnd?
 bc68edb0af574bf79f9550ead8ebae5c UnityEngine.HoloLens.dll:UnityEngine.Audio.AudioSpatializerMicrosoft
 c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingCollider
@@ -146,16 +147,18 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 45f3431f0103c41611e8d4eec3d439df UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.SpatialMappingRenderer
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInput
 463516d5b5fe8e67a0a24c48f2095b04 UnityEngine.HoloLens.dll:UnityEngine.EventSystems.HoloLensInputModule
-c6accd665c621e7cf647cffbb2c2bf06 Assembly-CSharp.dll:.Board
+bf2c2bc1037e43f3daf04f26e72a55b3 Assembly-CSharp.dll:.Board
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.BackgroundTile
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.SwipeController
-0a614706daf11109f1e5c1502cc84835 Assembly-CSharp.dll:.Dot
+c5d06cd77be67ec59ef9c4d3792969f7 Assembly-CSharp.dll:.Dot
 e13a8fd21e083b1974366b2f59a1ad14 Assembly-CSharp.dll:.FindMatches
-90319a4f89995610d7c9726b58f47f8c Assembly-CSharp.dll:.Trash
+6cc9ac31fdc5acb670a2dbb25fe6815b Assembly-CSharp.dll:.Trash
 34967ba0aa35688ad54d7cf15be0a960 Assembly-CSharp.dll:.TrashManager
 22bb97b3747f31982b00dc74624aa811 Assembly-CSharp.dll:.LevelManager
 db849818f0d643178f3c95b3ab438992 Assembly-CSharp.dll:.CountDown
 65f1c7ed98ca38b7d71ea92366cc9980 Assembly-CSharp.dll:.ProgressManager
-cd5d9ad1891309432e69c4650846dcab Assembly-CSharp.dll:.YellowTrash
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.GameManager
 ad8128dc4e50376e2eb355f5faa3a7c3 Assembly-CSharp.dll:.MainMenuScript
+6ec6807938eb05c4888d3a76ce25e32e Assembly-CSharp.dll:.GameEndMenu
+e1ff970319fa33ba4daa3ef83c5282a8 Assembly-CSharp.dll:.BurnScript
+237f6a34ad94c232ac29697e01a04116 Assembly-CSharp.dll:.GreenTrash
