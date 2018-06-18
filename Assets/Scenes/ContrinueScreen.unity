@@ -408,7 +408,6 @@ GameObject:
   - component: {fileID: 1020183789}
   - component: {fileID: 1020183788}
   - component: {fileID: 1020183787}
-  - component: {fileID: 1020183790}
   - component: {fileID: 1020183791}
   m_Layer: 5
   m_Name: Button Start
@@ -510,18 +509,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1020183785}
---- !u!114 &1020183790
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1020183785}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c601793f99994cc4bdb2c98962bc3c9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_YourButton: {fileID: 0}
 --- !u!61 &1020183791
 BoxCollider2D:
   m_ObjectHideFlags: 0

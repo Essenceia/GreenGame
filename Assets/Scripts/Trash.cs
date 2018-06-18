@@ -65,9 +65,11 @@ public class Trash : MonoBehaviour {
                 board.compostCounter = 0;
                 for (int i = 0; i < board.toRecycle.Length; i++)
                 {
-                    board.toRecycle[i].GetComponent<Dot>().Recycle();
-                    //Destroy(board.toCompost[i]);
-                    board.toRecycle[i] = null;
+                    if (board.toRecycle[i]) {
+                        board.toRecycle[i].GetComponent<Dot>().Recycle();
+                        //Destroy(board.toCompost[i]);
+                        board.toRecycle[i] = null;
+                    }
                 }
             }
             else if (this.gameObject.tag == "Brown")
@@ -76,18 +78,22 @@ public class Trash : MonoBehaviour {
                 board.compostCounter = 0;
                 for (int i = 0; i < board.toCompost.Length; i++)
                 {
-                    board.toCompost[i].GetComponent<Dot>().Recycle();
-                    //Destroy(board.toCompost[i]);
-                    board.toCompost[i] = null;
+                    if (board.toCompost[i]) {
+                        board.toCompost[i].GetComponent<Dot>().Recycle();
+                        //Destroy(board.toCompost[i]);
+                        board.toCompost[i] = null;
+                    }
                 }
             } else if (this.gameObject.tag == "White") {
                 progress.GetComponent<ProgressManager>().UpdateScore(maxCapacity);
                 board.glassCounter = 0;
                 for (int i = 0; i < board.toGlass.Length; i++)
                 {
-                    board.toGlass[i].GetComponent<Dot>().Recycle();
-                    //Destroy(board.toCompost[i]);
-                    board.toGlass[i] = null;
+                    if (board.toGlass[i]) {
+                        board.toGlass[i].GetComponent<Dot>().Recycle();
+                        //Destroy(board.toCompost[i]);
+                        board.toGlass[i] = null;
+                    }
                 }
             } else if (this.gameObject.tag == "Blue")
             {
@@ -95,9 +101,11 @@ public class Trash : MonoBehaviour {
                 board.electronicCounter = 0;
                 for (int i = 0; i < board.toElectronic.Length; i++)
                 {
-                    board.toElectronic[i].GetComponent<Dot>().Recycle();
-                    //Destroy(board.toCompost[i]);
-                    board.toElectronic[i] = null;
+                    if (board.toElectronic[i]){
+                        board.toElectronic[i].GetComponent<Dot>().Recycle();
+                        //Destroy(board.toCompost[i]);
+                        board.toElectronic[i] = null;
+                    }
                 }
             }
             //empty can 

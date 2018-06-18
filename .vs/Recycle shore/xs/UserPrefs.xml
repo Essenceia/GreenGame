@@ -1,9 +1,9 @@
 ﻿<Properties StartupConfiguration="{CB8E025A-C042-EEB6-EFAC-7D77B6BE1158}|">
   <MonoDevelop.Ide.ItemProperties.Assembly-CSharp PreferredExecutionTarget="Unity.Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/animfw.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/GreenTrash.cs">
     <Files>
-      <File FileName="Assets/Scripts/Dot.cs" Line="164" Column="15" />
-      <File FileName="Assets/Scripts/Board.cs" Line="121" Column="57" />
+      <File FileName="Assets/Scripts/Dot.cs" Line="185" Column="16" />
+      <File FileName="Assets/Scripts/Board.cs" Line="174" Column="15" />
       <File FileName="Assets/Scripts/FindMatches.cs" Line="34" Column="25" />
       <File FileName="Assets/Scripts/Trash.cs" Line="70" Column="47" />
       <File FileName="Assets/Scripts/GameManager.cs" Line="24" Column="10" />
@@ -17,7 +17,9 @@
       <File FileName="Assets/Scripts/BackgroundTile.cs" Line="11" Column="9" />
       <File FileName="Assets/Scripts/BurnScript.cs" Line="15" Column="18" />
       <File FileName="Assets/Scripts/TrashManager.cs" Line="33" Column="3" />
-      <File FileName="Assets/Scripts/animfw.cs" Line="7" Column="19" />
+      <File FileName="Assets/Scripts/animfw.cs" Line="20" Column="1" />
+      <File FileName="Assets/Scripts/CountDown.cs" Line="8" Column="11" />
+      <File FileName="Assets/Scripts/LevelManager.cs" Line="123" Column="32" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

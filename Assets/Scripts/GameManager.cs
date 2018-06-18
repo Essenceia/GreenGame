@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour {
 
     private bool isOver;
-    private bool win;
+    //private bool win;
 
     private CountDown timer;
 	// Use this for initialization
@@ -17,10 +17,10 @@ public class GameManager : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		//check if timer expried
-        if (timer.timeLeft < 0){
+        if (timer.timeLeft < 1){
             //stop game
             isOver = true;
-            win = false;
+            //win = false;
         }
         //check for point progress 
 

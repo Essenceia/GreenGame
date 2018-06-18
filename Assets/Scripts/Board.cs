@@ -14,7 +14,6 @@ public class Board : MonoBehaviour {
     public int offset;
     public GameObject tilePrefab;
     public GameObject[] dots;
-    private BackgroundTile[,] allTiles;
     public GameObject[,] allDots;
     private FindMatches findMatches;
     private TrashManager trashManager;
@@ -28,11 +27,14 @@ public class Board : MonoBehaviour {
     public int electronicCounter = 0;
     public GameObject[] toWaste;
     public int wasteCounter = 0;
+    //public UnityEngine.UI.Text hello;
 
-    public BurnScript burnScript;
+    //public BurnScript burnScript;
 
     [Header("Level Manager")]
     private LevelManager levelManager;
+
+    //public SoundManager Sound;
 
 
 
@@ -42,8 +44,11 @@ public class Board : MonoBehaviour {
         findMatches = FindObjectOfType<FindMatches>();
         levelManager = FindObjectOfType<LevelManager>();
         trashManager = FindObjectOfType<TrashManager>();
-        burnScript = FindObjectOfType<BurnScript>();
-        allTiles = new BackgroundTile[width, height];
+        //burnScript = FindObjectOfType<BurnScript>();
+
+        //Sound = FindObjectOfType<SoundManager>();
+
+    
         allDots = new GameObject[width, height];
 
         //TODO : get current level
@@ -59,17 +64,21 @@ public class Board : MonoBehaviour {
         toGlass = new GameObject[30];
         toElectronic = new GameObject[30];
         toWaste = new GameObject[30];
+        // hello = GameObject.FindGameObjectWithTag("UUUIII");
 	}
 	
     private void SetUp() {
         for (int i = 0; i < width; i++) {
             for (int j = 0; j < height; j++) {
+                Debug.Log(i + " / " + j);
+
                 Vector2 tempPosition = new Vector2(i, j + offset);
                 GameObject backgroundTile = Instantiate(tilePrefab, tempPosition, tilePrefab.transform.rotation) as GameObject;
                 backgroundTile.transform.parent = this.transform;
                 backgroundTile.name = "(" + i + ", " + j + ")";
                 int dotToUse = Random.Range(0, dots.Length);
                 int maxIterations = 0;
+                Debug.Log(i + " / " + j);
                 while(MatchesAt(i, j, dots[dotToUse]) && maxIterations < 100) {
                     dotToUse = Random.Range(0, dots.Length);
                     maxIterations++;
@@ -83,6 +92,7 @@ public class Board : MonoBehaviour {
                 dot.transform.parent = this.transform;
                 dot.name = "(" + i + ", " + j + ")";
                 allDots[i, j] = dot;
+                Debug.Log(i + " / " + j);
             }
         } 
     }
@@ -162,6 +172,10 @@ public class Board : MonoBehaviour {
                 }
             }
         }
+
+        //Sound.PlayMoveBell();
+
+
         StartCoroutine(DecreaseRowCo());
     }
 

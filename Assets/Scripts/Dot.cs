@@ -43,7 +43,9 @@ public class Dot : MonoBehaviour
     {
         board = FindObjectOfType<Board>();
         findMatches = FindObjectOfType<FindMatches>();
-        trash = GameObject.FindGameObjectWithTag(TrashMap());
+        if (TrashMap() != "") {
+            trash = GameObject.FindGameObjectWithTag(TrashMap());
+        }
         eco = GameObject.FindGameObjectWithTag("ECO");
     }
 
@@ -63,7 +65,7 @@ public class Dot : MonoBehaviour
             case "Y":
                 return "Yellow";
             default:
-                return "";
+                return "White";
         }
     }
 

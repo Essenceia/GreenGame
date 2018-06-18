@@ -17,7 +17,7 @@ public class GreenTrash : MonoBehaviour {
     readonly int maxCapacity = 10;
 
     public BurnScript burPref;
-    private BurnScript sacrifice;
+    //private BurnScript sacrifice;
 
     // Use this for initialization
     void Start()
@@ -64,7 +64,7 @@ public class GreenTrash : MonoBehaviour {
     {
         if (this.isFull())
         {
-            sacrifice = Instantiate(burPref, transform.position, Quaternion.identity) ;
+           // sacrifice = Instantiate(burPref, transform.position, Quaternion.identity) ;
             //empty can 
             EmptyCan();
         }
