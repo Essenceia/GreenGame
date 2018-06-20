@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class SoundManager : MonoBehaviour {
 
-    public AudioSource moveBell;
+    public AudioSource trashDance;
     public AudioSource swipe;
     public AudioSource match;
-    public AudioSource totrash;
+    public AudioSource trashClick;
 
 
-    public void PlayMoveBell(){
-        moveBell.Play();
+    public void PlayTrashClick(){
+        if(trashClick!=null) trashClick.Play();
     }
     public void Playswipe()
     {
-        swipe.Play();
+        if(swipe!=null) swipe.Play();
     }
     public void Playmatch()
     {
-        match.Play();
+        if(match!=null) match.Play();
     }
     public void Playtotrash()
     {
-        totrash.Play();
+        if (trashDance!= null) trashDance.Play();
     }
 }
