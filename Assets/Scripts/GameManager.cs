@@ -16,6 +16,7 @@ public class GameManager : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
 		//check if timer expried
         if (timer.timeLeft < 1){
             //stop game
