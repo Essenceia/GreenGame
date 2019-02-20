@@ -15,6 +15,6 @@ public class MainMenuScript : MonoBehaviour
 
     void TaskOnClick()
     {
-        SceneManager.LoadScene("SampleScene");
+        SceneManager.LoadScene("GameSceen");
     }
 }

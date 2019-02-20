@@ -7,7 +7,7 @@ using System.Threading;
 
 public class CountDown : MonoBehaviour {
 
-    public int timeLeft = 60; //Seconds Overall
+    public int timeLeft; //Seconds Overall
     public UnityEngine.UI.Text countdown; //UI Text Object
     void Start()
     {

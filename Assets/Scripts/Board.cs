@@ -27,6 +27,7 @@ public class Board : MonoBehaviour {
     public int electronicCounter = 0;
     public GameObject[] toWaste;
     public int wasteCounter = 0;
+    public int level = 3; 
     //public UnityEngine.UI.Text hello;
 
     //public BurnScript burnScript;
@@ -41,6 +42,7 @@ public class Board : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
+        //Identify other managers by name
         findMatches = FindObjectOfType<FindMatches>();
         levelManager = FindObjectOfType<LevelManager>();
         trashManager = FindObjectOfType<TrashManager>();
@@ -52,12 +54,12 @@ public class Board : MonoBehaviour {
         allDots = new GameObject[width, height];
 
         //TODO : get current level
-        levelManager.Load(3);
+        levelManager.Load(level);
 
         SetUp();
         // TODO : add real trashes
-        int[] test = { 0, 1, 2, 3, 4 };
-        trashManager.Init(test);
+        int[] canIdList = { 0, 1, 2, 3, 4 };
+        trashManager.Init(canIdList);
 
         toCompost = new GameObject[30];
         toRecycle = new GameObject[30];

@@ -31,11 +31,11 @@ public class LevelManager : MonoBehaviour {
         loadLvl = 0;
     }
 
-    public int getNbCan()
+    /*public int getNbCan()
     {
         return 2;
-    }
-    public int getDechetPrefabIndex()
+    }*/
+    /*public int getDechetPrefabIndex()
     {
         if (loadLvl < 1)
         {
@@ -43,7 +43,7 @@ public class LevelManager : MonoBehaviour {
         }
         int type = Random.Range(0, LvlDechetsPrefabIndex.Length);
         return LvlDechetsPrefabIndex[type];
-    }
+    }*/
 
     public void Load(int newlvl)
     {

@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
-    private bool isOver;
+   public bool isOver;
     //private bool win;
 
     private CountDown timer;

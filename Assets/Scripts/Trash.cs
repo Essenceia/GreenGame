@@ -55,6 +55,8 @@ public class Trash : MonoBehaviour {
         }
     }
 
+
+    //clean trash if full and clicked on
     private void OnMouseDown()
     {
         if (this.isFull()) {

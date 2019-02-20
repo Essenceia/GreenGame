@@ -7,6 +7,7 @@ public class TrashManager : MonoBehaviour {
     [Header("Trash can")]
     public GameObject[] trashPrefab;
     public GameObject[] trash;
+    
 
 	// Use this for initialization
 	void Start () {
@@ -17,7 +18,7 @@ public class TrashManager : MonoBehaviour {
         float xCan;
         int nbCan;
 
-        //add cans
+        //add cans radomly when beegining game 
         nbCan = trashes.Length;
         trash = new GameObject[nbCan];
         for (int i = 0; i < nbCan; i++)
