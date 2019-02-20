@@ -11,8 +11,10 @@ public class CountDown : MonoBehaviour {
     public UnityEngine.UI.Text countdown; //UI Text Object
     void Start()
     {
+
         StartCoroutine("LoseTime");
         Time.timeScale = 1; //Just making sure that the timeScale is right
+
     }
     void Update()
     {
