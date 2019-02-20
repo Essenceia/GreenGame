@@ -95,7 +95,7 @@ public class Board : MonoBehaviour
                     maxIterations++;
                 }
                 maxIterations = 0;
-
+                Debug.Log("Value of dits " + dots + " index " + dotToUse);
                 GameObject dot = Instantiate(dots[dotToUse], tempPosition, Quaternion.identity);
                 dot.GetComponent<Dot>().row = j;
                 dot.GetComponent<Dot>().column = i;

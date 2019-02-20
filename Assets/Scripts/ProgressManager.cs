@@ -32,6 +32,6 @@ public class ProgressManager : MonoBehaviour {
 
     private void UpdateUI() {
         progress.size = (float)score / (float)scoreMax;
-        progressText.text = score + " / " + scoreMax;
+        progressText.text = score/scoreMax + " %";
     }
 }
