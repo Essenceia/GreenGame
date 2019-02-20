@@ -11,10 +11,12 @@ public class TrashManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+
 	}
 
 	public void Init(int[] trashes)
 	{
+
         float xCan;
         int nbCan;
 
@@ -30,7 +32,5 @@ public class TrashManager : MonoBehaviour {
 	}
 
 	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update () {}
 }

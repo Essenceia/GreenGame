@@ -22,6 +22,7 @@ public class FindMatches : MonoBehaviour {
 
     //Start cooroutine to seatch for all matches in board 
     public void FindAllMatches() {
+
         StartCoroutine(FindAllMatchesCo());
     }
 

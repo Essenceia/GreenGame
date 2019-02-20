@@ -11,6 +11,7 @@ public class GameManager : MonoBehaviour {
     private CountDown timer;
 	// Use this for initialization
 	void Start () {
+
         timer = FindObjectOfType<CountDown>();
 	}
 	
